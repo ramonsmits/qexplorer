@@ -1,0 +1,188 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07E5D26D-8CE6-436B-871E-F92274A1E592}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QXplorer</RootNamespace>
+    <AssemblyName>QXplorer</AssemblyName>
+    <ApplicationIcon>image\QXplorer.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileHash.cs" />
+    <Compile Include="frmConnectComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConnectComputer.Designer.cs">
+      <DependentUpon>frmConnectComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateQueue.Designer.cs">
+      <DependentUpon>frmCreateQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQXplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQXplorer.Designer.cs">
+      <DependentUpon>frmQXplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="frmMSMQProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMSMQProperty.Designer.cs">
+      <DependentUpon>frmMSMQProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSMQXplorer.cs" />
+    <Compile Include="NetWorkBrowser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConnectComputer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConnectComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateQueue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCreateQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQXplorer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmQXplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMSMQProperty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMSMQProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="axialis.ico" />
+    <Content Include="image\about.png" />
+    <None Include="image\Computer On.png" />
+    <None Include="image\Config-Tools.png" />
+    <None Include="image\Arrow-Right.png" />
+    <None Include="image\Arrow-Left.png" />
+    <Content Include="image\copy_clipboard_24_h.png" />
+    <Content Include="image\cut_clipboard_24.png" />
+    <None Include="image\delete.png" />
+    <Content Include="image\delete_x_24.png" />
+    <None Include="image\exit.png" />
+    <None Include="image\folder.png" />
+    <None Include="image\Globe.ico" />
+    <None Include="image\IE.png" />
+    <Content Include="image\mail_24.png" />
+    <None Include="image\new_document_24_h.png" />
+    <None Include="image\New Queue.ico" />
+    <Content Include="image\NTclosemessage.ico" />
+    <Content Include="image\NTopemmessage.ico" />
+    <None Include="image\open alt.png" />
+    <Content Include="image\open_document_24.ico" />
+    <Content Include="image\paste_clipboard_24_h.png" />
+    <Content Include="image\QXplorer.ico" />
+    <Content Include="image\redo_24_h.png" />
+    <None Include="image\refresh.png" />
+    <Content Include="image\refresh_doc_24_h.png" />
+    <Content Include="image\save_24.png" />
+    <None Include="image\sendMessage.png" />
+    <Content Include="image\stop_24.png" />
+    <None Include="image\stop_24_h.png" />
+    <Content Include="image\Tclosemessage.ico" />
+    <Content Include="image\Topenmessage.ico" />
+    <None Include="image\Thumbs.db" />
+    <None Include="image\trash.png" />
+    <None Include="image\Undetmessage.ico" />
+    <Content Include="image\undo_24_h.png" />
+    <None Include="Resources\donate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSMQ">
+      <Guid>{D7D6E071-DCCD-11D0-AA4B-0060970DEBAE}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
